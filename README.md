@@ -1,4 +1,5 @@
 # PRAJVAYA | Victory Through Intellect
+<img width="1024" height="1024" alt="logo" src="https://github.com/user-attachments/assets/e10ffaeb-9bad-4f89-b386-2c521cae4c66" />
 
 Prajvaya is a premium software systems and engineering codex. The name **PRAJVAYA** (derived from Devanagari Sanskrit *प्राज्वय*) embodies the fusion of ancient Sanatan wisdom with state-of-the-art technological architectures. We construct decentralized applications, Zero-Trust security networks, AI-driven repository systems, and smart IoT automation nodes.
 
@@ -93,9 +94,11 @@ This outputs optimized, static assets inside the `dist/` directory.
 ## 👥 Co-Founders
 
 - **Subhajit Ghosh** - *Co-Founder & Chief Architect*
+   <img width="1024" height="1024" alt="subhajit" src="https://github.com/user-attachments/assets/f6307fdb-7c0f-4fb6-9756-2e62daee7c03" />
   - Robotics, Embedded systems C++, IoT automations. Vice-Chairperson of BCREC Robotics & Drones Club.
   - [GitHub Profile](https://github.com/subhajit-ghosh-dev)
 - **Survi Mukherjee** - *Co-Founder & Director of AI*
+  <img width="1024" height="1024" alt="survi" src="https://github.com/user-attachments/assets/23cbefe7-6594-4ba6-b702-ccb0e42c165f" />
   - Full-stack developer, machine learning researcher, and GDG Durgapur network contributor. Published IEEE CIACON 2025 author.
   - [GitHub Profile](https://github.com/survi09mukherjee)
 
