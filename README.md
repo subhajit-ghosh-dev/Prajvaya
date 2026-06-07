@@ -1,5 +1,10 @@
 # PRAJVAYA | Victory Through Intellect
-<img width="400" height="400" alt="logo" src="https://github.com/user-attachments/assets/e10ffaeb-9bad-4f89-b386-2c521cae4c66" />
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/e10ffaeb-9bad-4f89-b386-2c521cae4c66"
+       alt="logo"
+       width="200"
+       height="200">
+</p>
 
 Prajvaya is a premium software systems and engineering codex. The name **PRAJVAYA** (derived from Devanagari Sanskrit *प्राज्वय*) embodies the fusion of ancient Sanatan wisdom with state-of-the-art technological architectures. We construct decentralized applications, Zero-Trust security networks, AI-driven repository systems, and smart IoT automation nodes.
 
