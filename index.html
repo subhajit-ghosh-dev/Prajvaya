@@ -1,0 +1,1586 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-locked">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="PRAJVAYA - Victory Through Intellect. A premium portfolio website combining ancient Sanatan wisdom with futuristic technology aesthetics. Redesigned with an interactive 4D red leather opening ritual.">
+  <title>PRAJVAYA | Victory Through Intellect</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" href="assets/logo.png">
+</head>
+<body>
+
+  <!-- Dynamic Cosmic Particle Canvas (Always running behind overlays) -->
+  <canvas id="bg-canvas"></canvas>
+  <div class="cosmic-overlay"></div>
+
+  <!-- Custom Crosshair Cursor Elements -->
+  <div class="custom-cursor-dot" id="cursor-dot"></div>
+  <div class="custom-cursor-ring" id="cursor-ring"></div>
+
+  <!-- ==========================================
+     SCENE 1: CINEMATIC WELCOME INTRO 
+     ========================================== -->
+  <div id="intro-stage" class="stage active">
+    <div class="intro-content">
+      <h1 class="intro-title" id="intro-title-text">WELCOME TO PRAJVAYA</h1>
+      <p class="intro-subtitle" id="intro-subtitle-text">Victory Through Intellect</p>
+    </div>
+  </div>
+
+  <!-- ==========================================
+     SCENE 2: THE 4D MAGICAL RED BOOK OPENING STAGE
+     ========================================== -->
+  <div id="book-opening-stage" class="stage">
+    <div class="opening-book" id="opening-book">
+      
+      <!-- Spine Hinge -->
+      <div class="book-spine"></div>
+
+      <!-- Book Cover (Front Cover) -->
+      <div class="opening-book-cover">
+        <div class="cover-design">
+          <!-- Embossed Gold Sri Yantra on cover -->
+          <svg class="cover-yantra-svg" viewBox="0 0 500 500">
+            <rect x="40" y="40" width="420" height="420" rx="8" />
+            <circle cx="250" cy="250" r="190" />
+            <circle cx="250" cy="250" r="150" />
+            <polygon points="170,185 330,185 250,335" />
+            <polygon points="170,315 330,315 250,165" />
+            <circle cx="250" cy="250" r="3" />
+          </svg>
+          <div>
+            <h2 class="cover-title">प्राज्वय ग्रन्थः</h2>
+            <p class="cover-subtitle">Prajvaya Chronicle</p>
+          </div>
+          <button class="btn-open-prompt">Open Chronicle</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+  <!-- ==========================================
+     SCENE 3: MAIN SCROLLABLE WEB PORTFOLIO
+     ========================================== -->
+  <div id="web-content">
+    
+    <!-- HUD Header -->
+    <header id="hud-header">
+      <div class="logo-container">
+        <img src="assets/logo.png" alt="PRAJVAYA Logo" class="header-logo">
+        <span class="logo-text">PRAJVAYA</span>
+      </div>
+      
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#home" class="active">Home</a></li>
+          <li><a href="#about">About Codex</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#sovereign">Sovereign Swadeshi</a></li>
+          <li><a href="#founders">Founders</a></li>
+          <li><a href="#contact">Terminal</a></li>
+        </ul>
+      </nav>
+
+      <div class="hud-telemetry">
+        <div class="telemetry-item sanskrit">विजयाय बुद्धिः</div>
+        <div class="telemetry-item">
+          <!-- Ambient Audio Control Beacon -->
+          <button class="audio-toggle" id="btn-audio-toggle" aria-label="Toggle mute">
+            <div class="beacon"></div>
+            <span>AUDIO: MUTED</span>
+          </button>
+        </div>
+        <div class="telemetry-item">
+          <span>SYS: ONLINE</span>
+          <div class="status-beacon"></div>
+        </div>
+      </div>
+      
+      <!-- Mobile Menu Trigger -->
+      <button class="hamburger" aria-label="Toggle navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </header>
+
+    <!-- HOME / HERO SECTION -->
+    <section id="home" class="reveal">
+      <div class="hero-content">
+        <img src="assets/logo.png" alt="PRAJVAYA Logo" class="hero-logo">
+        <span class="hero-pretitle">Sovereign Intellect</span>
+        <h1 class="hero-title">PRAJVAYA</h1>
+        <h2 class="hero-tagline">Victory Through Intellect</h2>
+        <p class="hero-mission">
+          Prajvaya combines ancient Sanatan wisdom with state-of-the-art software systems. We architect decentralized platforms, Zero-Trust networks, and AI-driven repositories.
+        </p>
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-primary">Explore Codex</a>
+          <a href="#contact" class="btn btn-secondary">Transmit Signal</a>
+        </div>
+      </div>
+      
+      <div class="hero-visual">
+        <div class="hologram-container" id="mandala-hologram">
+          <div class="hologram-circle circle-outer"></div>
+          <div class="hologram-circle circle-inner"></div>
+          <!-- Concentric Circuit Sri Yantra SVG -->
+          <svg class="sri-yantra-svg" viewBox="0 0 500 500">
+            <rect x="40" y="40" width="420" height="420" rx="8" />
+            <circle cx="250" cy="250" r="190" />
+            <circle cx="250" cy="250" r="150" />
+            <polygon points="170,185 330,185 250,335" />
+            <polygon points="170,315 330,315 250,165" />
+            <circle cx="250" cy="250" r="3" />
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT CODEX SECTION -->
+    <section id="about" class="reveal">
+      <div class="section-header">
+        <span class="section-subtitle">Core Philosophy</span>
+        <h2 class="section-title">Our Codex</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-card">
+          <div class="about-card-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+          </div>
+          <h3 class="about-card-title">Intellectual Ascent</h3>
+          <p class="about-card-text">
+            A future engineered through deep knowledge. We cultivate wisdom and academic truth to resolve digital issues.
+          </p>
+        </div>
+        <div class="about-card">
+          <div class="about-card-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3 class="about-card-title">Unyielding Resolve</h3>
+          <p class="about-card-text">
+            Dedication and determination are the catalysts of sustainable evolution. We approach hard engineering challenges with unyielding focus.
+          </p>
+        </div>
+        <div class="about-card">
+          <div class="about-card-icon">
+            <svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+          </div>
+          <h3 class="about-card-title">Quantum Genesis</h3>
+          <p class="about-card-text">
+            Small, focused, and precise beginnings possess the mathematical capacity to manifest large-scale, global ecosystem impacts.
+          </p>
+        </div>
+        <div class="about-card">
+          <div class="about-card-icon">
+            <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M9 7a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm14 14v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h3 class="about-card-title">Sovereign Synergy</h3>
+          <p class="about-card-text">
+            True unity aligned with intellect multiplies capabilities. Together, individual contributors form an impenetrable block of progress.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects" class="reveal">
+      <div class="section-header">
+        <span class="section-subtitle">Technical Artifacts</span>
+        <h2 class="section-title">What We Have Built</h2>
+      </div>
+      <div class="projects-container">
+        <!-- Project 1: KAVACH SECURECOMM -->
+        <div class="project-card">
+          <div class="project-visual">
+            <img src="assets/kavach.png" alt="Kavach SecureComm UI Mockup" class="project-img-asset">
+          </div>
+          <div class="project-details">
+            <h3 class="project-title">Kavach SecureComm</h3>
+            <p class="project-desc">
+              A proof-of-concept closed-group encrypted messaging platform designed for defence personnel and families, following Zero-Trust security. Featuring Kotlin Jetpack Compose mobile app, Android Keystore, E2E Signal Protocol encryption, Node.js API WebSocket blind relay backend, PostgreSQL with Row-Level Security, and Keycloak OAuth authentication.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">Jetpack Compose</span>
+              <span class="tech-tag">Signal Protocol</span>
+              <span class="tech-tag">Zero-Trust</span>
+              <span class="tech-tag">WebSockets</span>
+              <span class="tech-tag">PostgreSQL RLS</span>
+            </div>
+            <div class="project-actions">
+              <a href="https://github.com/Prajvaya/kavachsecurecom" target="_blank" class="btn btn-secondary btn-icon">
+                <svg viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                <span>View Repository</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2: SYNRAX SS -->
+        <div class="project-card">
+          <div class="project-visual">
+            <img src="assets/synrax.png" alt="SYNRAX SS UI Mockup" class="project-img-asset">
+          </div>
+          <div class="project-details">
+            <h3 class="project-title">SYNRAX SS</h3>
+            <p class="project-desc">
+              An AI-powered, real-time event media sharing platform. Invites participants via dynamically generated QR codes for real-time WebSocket gallery uploads. Runs backend face clustering (scikit-learn) to allow participants to automatically filter photos. Structured on a Python FastAPI backend and Java Android client using Retrofit, Glide, and ML Kit scanner.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">FastAPI</span>
+              <span class="tech-tag">WebSockets</span>
+              <span class="tech-tag">Face Clustering</span>
+              <span class="tech-tag">Android ML Kit</span>
+              <span class="tech-tag">Python</span>
+            </div>
+            <div class="project-actions">
+              <a href="https://github.com/Prajvaya/SYNRAX-SS" target="_blank" class="btn btn-secondary btn-icon">
+                <svg viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                <span>View Repository</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOVEREIGN SWADESHI SECTION -->
+    <section id="sovereign" class="reveal">
+      <div class="section-header">
+        <span class="section-subtitle">Aatmanirbhar Technology Initiative</span>
+        <h2 class="section-title">Sovereign Swadeshi Node</h2>
+      </div>
+      <div class="sovereign-container">
+        <div class="sovereign-details">
+          <h3 class="sovereign-heading">100% Indigenous Digital Sovereignty</h3>
+          <p class="sovereign-desc">
+            Prajvaya is committed to building systems that are fully envisioned, architected, and compiled in India. Our software codebases, encryption architectures, database endpoints, and hardware integrations are crafted locally to safeguard data security and digital sovereignty.
+          </p>
+          <div class="sovereign-grid">
+            <div class="sovereign-card">
+              <div class="sovereign-icon">
+                <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L11 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+              </div>
+              <h4>Sovereign Codebases</h4>
+              <p>Constructed entirely locally to exclude foreign telemetry networks, backdoors, and data leakage channels.</p>
+            </div>
+            <div class="sovereign-card">
+              <div class="sovereign-icon">
+                <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/></svg>
+              </div>
+              <h4>National Security Compliance</h4>
+              <p>Tailored systems complying with strict national security directives and local encryption regulations.</p>
+            </div>
+            <div class="sovereign-card">
+              <div class="sovereign-icon">
+                <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/></svg>
+              </div>
+              <h4>Swadeshi Hardware</h4>
+              <p>Embedded systems, automated drone controllers, and IoT layers assembled locally in collaborative university labs.</p>
+            </div>
+          </div>
+        </div>
+        <div class="sovereign-visual">
+          <div class="chakra-container">
+            <!-- Digital Ashoka Chakra Graphic representing Made In India -->
+            <svg class="digital-chakra-svg" viewBox="0 0 200 200">
+              <circle cx="100" cy="100" r="80" class="chakra-outer-ring" />
+              <circle cx="100" cy="100" r="15" class="chakra-inner-ring" />
+              <!-- 24 Spokes representing progress -->
+              <g class="chakra-spokes">
+                <line x1="100" y1="20" x2="100" y2="180" />
+                <line x1="20" y1="100" x2="180" y2="100" />
+                <line x1="43.4" y1="43.4" x2="156.6" y2="156.6" />
+                <line x1="43.4" y1="156.6" x2="156.6" y2="43.4" />
+                
+                <line x1="100" y1="100" x2="100" y2="20" transform="rotate(15, 100, 100)" />
+                <line x1="100" y1="100" x2="100" y2="20" transform="rotate(30, 100, 100)" />
+                <line x1="100" y1="100" x2="100" y2="20" transform="rotate(45, 100, 100)" />
+                <line x1="100" y1="100" x2="100" y2="20" transform="rotate(60, 100, 100)" />
+                <line x1="100" y1="100" x2="100" y2="20" transform="rotate(75, 100, 100)" />
+                
+                <line x1="100" y1="100" x2="100" y2="20" transform="rotate(105, 100, 100)" />
+                <line x1="100" y1="100" x2="100" y2="20" transform="rotate(120, 100, 100)" />
+                <line x1="100" y1="100" x2="100" y2="20" transform="rotate(135, 100, 100)" />
+                <line x1="100" y1="100" x2="100" y2="20" transform="rotate(150, 100, 100)" />
+                <line x1="100" y1="100" x2="100" y2="20" transform="rotate(165, 100, 100)" />
+                
+                <line x1="100" y1="100" x2="100" y2="20" transform="rotate(195, 100, 100)" />
+                <line x1="100" y1="100" x2="100" y2="20" transform="rotate(210, 100, 100)" />
+                <line x1="100" y1="100" x2="100" y2="20" transform="rotate(225, 100, 100)" />
+                <line x1="100" y1="100" x2="100" y2="20" transform="rotate(240, 100, 100)" />
+                <line x1="100" y1="100" x2="100" y2="20" transform="rotate(255, 100, 100)" />
+                
+                <line x1="100" y1="100" x2="100" y2="20" transform="rotate(285, 100, 100)" />
+                <line x1="100" y1="100" x2="100" y2="20" transform="rotate(300, 100, 100)" />
+                <line x1="100" y1="100" x2="100" y2="20" transform="rotate(315, 100, 100)" />
+                <line x1="100" y1="100" x2="100" y2="20" transform="rotate(330, 100, 100)" />
+                <line x1="100" y1="100" x2="100" y2="20" transform="rotate(345, 100, 100)" />
+              </g>
+            </svg>
+            <div class="swadeshi-badge">
+              <span class="badge-accent">MADE IN INDIA</span>
+              <span class="badge-sub">SWADESHI TECH</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOUNDERS SECTION -->
+    <section id="founders" class="reveal">
+      <div class="section-header">
+        <span class="section-subtitle">Synergistic Alliance</span>
+        <h2 class="section-title">Co-Founders</h2>
+      </div>
+      <div class="founders-grid">
+        <!-- Founder 1: Subhajit -->
+        <div class="founder-card">
+          <div class="founder-img-wrapper">
+            <img src="assets/subhajit.png" alt="Subhajit Ghosh" class="founder-img">
+          </div>
+          <div class="founder-details">
+            <div class="founder-name-role">
+              <h3 class="founder-name">Subhajit Ghosh</h3>
+              <span class="founder-role">Co-Founder &amp; Chief Architect</span>
+            </div>
+            <p class="founder-bio">
+              Robotics and IoT Developer passionate about Embedded Systems and hardware-software integration. Currently pursuing a B.Tech in Computer Science and Design at BCREC, he serves as the Vice-Chairperson of the Robotics &amp; Drones Club. He designs intelligent, automated frameworks like smart air monitors, garden automation nodes, and SIH 2025 civic reporting systems.
+            </p>
+            <div class="founder-meta-block">
+              <span class="founder-meta-label">Technical Focus</span>
+              <span class="founder-meta-content">Robotics, IoT Automation &amp; Embedded C++ Architecture</span>
+            </div>
+            <div class="founder-meta-block">
+              <span class="founder-meta-label">Secure Uplink</span>
+              <span class="founder-meta-content"><a href="mailto:subhajit.ghosh.dev@gmail.com" class="founder-email-link">subhajit.ghosh.dev@gmail.com</a></span>
+            </div>
+            <div class="founder-socials">
+              <a href="https://github.com/subhajit-ghosh-dev" target="_blank" class="founder-social-btn" aria-label="GitHub">
+                <svg viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              </a>
+              <a href="https://www.linkedin.com/in/subhajit-ghosh-a17104348/" target="_blank" class="founder-social-btn" aria-label="LinkedIn">
+                <svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+              </a>
+              <a href="mailto:subhajit.ghosh.dev@gmail.com" class="founder-social-btn" aria-label="Email">
+                <svg viewBox="0 0 24 24"><path fill="currentColor" d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Founder 2: Survi -->
+        <div class="founder-card">
+          <div class="founder-img-wrapper">
+            <img src="assets/survi.png" alt="Survi Mukherjee" class="founder-img">
+          </div>
+          <div class="founder-details">
+            <div class="founder-name-role">
+              <h3 class="founder-name">Survi Mukherjee</h3>
+              <span class="founder-role">Co-Founder &amp; Director of AI</span>
+            </div>
+            <p class="founder-bio">
+              Full-Stack Developer and Machine Learning researcher graduating in CSE '26 @ BCREC. An active community organizer with GDG Durgapur, she secured 2nd at the IT Expo and was a finalist at DoubleSlash 3.0. Her published research in IEEE CIACON 2025 focuses on traffic safety networks, synthesizing algorithms in full-stack setups.
+            </p>
+            <div class="founder-meta-block">
+              <span class="founder-meta-label">Technical Focus</span>
+              <span class="founder-meta-content">Full-Stack Development, ML Research &amp; Traffic Computer Vision</span>
+            </div>
+            <div class="founder-meta-block">
+              <span class="founder-meta-label">Secure Uplink</span>
+              <span class="founder-meta-content"><a href="mailto:survi.mukherjee09@gmail.com" class="founder-email-link">survi.mukherjee09@gmail.com</a></span>
+            </div>
+            <div class="founder-socials">
+              <a href="https://github.com/survi09mukherjee" target="_blank" class="founder-social-btn" aria-label="GitHub">
+                <svg viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              </a>
+              <a href="https://www.linkedin.com/in/survi-mukherjee-8302272a3?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="founder-social-btn" aria-label="LinkedIn">
+                <svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+              </a>
+              <a href="mailto:survi.mukherjee09@gmail.com" class="founder-social-btn" aria-label="Email">
+                <svg viewBox="0 0 24 24"><path fill="currentColor" d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT / TERMINAL SECTION -->
+    <section id="contact" class="reveal">
+      <div class="section-header">
+        <span class="section-subtitle">Signal Uplink</span>
+        <h2 class="section-title">Communication Hub</h2>
+      </div>
+      <div class="contact-container">
+        <div class="contact-info-panel">
+          <p class="contact-intro-text">
+            Initiate a secure connection packet. Transmit your project details, academic inquiries, or synergistic proposals directly to our repository coordinates.
+          </p>
+          
+          <div class="terminal-network-list">
+            <a href="mailto:prajvaya@gmail.com" class="network-link-card">
+              <div class="network-icon">
+                <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+              </div>
+              <div class="network-details">
+                <span class="network-name">Direct Mailbox</span>
+                <span class="network-address">prajvaya@gmail.com</span>
+              </div>
+            </a>
+            <a href="https://github.com/Prajvaya" target="_blank" class="network-link-card">
+              <div class="network-icon">
+                <svg viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              </div>
+              <div class="network-details">
+                <span class="network-name">Vision Coordinates</span>
+                <span class="network-address">github.com/Prajvaya</span>
+              </div>
+            </a>
+            <!-- LinkedIn Option for Prajvaya -->
+            <a href="https://linkedin.com/company/prajvaya" target="_blank" class="network-link-card">
+              <div class="network-icon">
+                <svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+              </div>
+              <div class="network-details">
+                <span class="network-name">Synergy Coordinates</span>
+                <span class="network-address">linkedin.com/company/prajvaya</span>
+              </div>
+            </a>
+          </div>
+        </div>
+        
+        <div class="terminal-hub-panel">
+          <div class="terminal-header">
+            <div class="terminal-dots">
+              <span class="dot-red"></span>
+              <span class="dot-yellow"></span>
+              <span class="dot-green"></span>
+            </div>
+            <span class="terminal-title">Prajvaya Terminal v1.0.8</span>
+            <span class="terminal-status">CON_SECURE</span>
+          </div>
+          <form class="terminal-body" id="contact-form">
+            <div class="form-group">
+              <label for="form-name" class="form-label">Client Identity</label>
+              <input type="text" id="form-name" class="form-input" placeholder="e.g., Subhajit Ghosh" required>
+            </div>
+            <div class="form-group">
+              <label for="form-email" class="form-label">Return Frequency</label>
+              <input type="email" id="form-email" class="form-input" placeholder="e.g., client@network.com" required>
+            </div>
+            <div class="form-group">
+              <label for="form-message" class="form-label">Cognitive Payload</label>
+              <textarea id="form-message" class="form-input" placeholder="Enter transmission packet message..." required></textarea>
+            </div>
+            <button type="submit" class="btn-terminal">Transmit Signal</button>
+          </form>
+          <div class="terminal-log-screen" id="terminal-logs">
+            <p>> terminal initialized. waiting for client payload inputs...</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <p class="footer-quote">कर्मण्येवाधिकारस्ते मा फलेषु कदाचन</p>
+      <div class="footer-logo">
+        <span class="footer-logo-title">PRAJVAYA</span>
+        <span class="footer-logo-subtitle">Victory Through Intellect</span>
+      </div>
+      <p class="footer-copyright">&copy; 2026 PRAJVAYA. All rights reserved. Secure node.</p>
+    </footer>
+  </div>
+
+  <!-- ==========================================
+     SCENE 4: CINEMATIC OUTRO / THANK YOU STAGE
+     ========================================== -->
+  <div id="outro-stage" class="stage">
+    <div class="outro-content">
+      <h1 class="outro-title">THANK YOU FOR VISITING</h1>
+      <p class="outro-subtitle">Victory Through Intellect</p>
+      <p class="outro-text">May ancient wisdom and future technology guide your path.</p>
+      <button class="btn-restart-chronicle" id="btn-restart">Restart Chronicle</button>
+    </div>
+  </div>
+
+  <script>
+/**
+ * PRAJVAYA - Vedic Ancient Wisdom & Future Tech Engineering Engine
+ * Handles Canvas particle background, Web Audio API Tanpura synthesizer, cover unfold, scroll reveal stages, and outro zooms.
+ */
+
+let soundEngine = null;
+let outroTriggered = false;
+
+document.addEventListener('DOMContentLoaded', () => {
+  initCustomCursor();
+  initCanvasBackground();
+  initIntroScene();
+  initBookController();
+  initTerminalHub();
+  initScrollReveal();
+  initNavHighlight();
+  initMobileMenu();
+  initOutroScrollTrigger();
+});
+
+/* ==========================================
+   1. CUSTOM TELEMETRY CROSSHAIR CURSOR
+   ========================================== */
+function initCustomCursor() {
+  const dot = document.getElementById('cursor-dot');
+  const ring = document.getElementById('cursor-ring');
+  if (!dot || !ring) return;
+
+  let mouseX = 0, mouseY = 0;
+  let ringX = 0, ringY = 0;
+
+  window.addEventListener('mousemove', (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+    dot.style.left = `${mouseX}px`;
+    dot.style.top = `${mouseY}px`;
+  });
+
+  function updateCursor() {
+    ringX += (mouseX - ringX) * 0.12;
+    ringY += (mouseY - ringY) * 0.12;
+    ring.style.left = `${ringX}px`;
+    ring.style.top = `${ringY}px`;
+    requestAnimationFrame(updateCursor);
+  }
+  updateCursor();
+
+  const hoverElements = 'a, button, .btn, .about-card, .project-card, .founder-card, .network-link-card, input, textarea, .opening-book';
+  
+  document.addEventListener('mouseover', (e) => {
+    if (e.target.closest(hoverElements)) {
+      ring.classList.add('hover');
+      dot.classList.add('hover');
+    }
+  });
+
+  document.addEventListener('mouseout', (e) => {
+    if (e.target.closest(hoverElements)) {
+      ring.classList.remove('hover');
+      dot.classList.remove('hover');
+    }
+  });
+}
+
+/* ==========================================
+   2. COSMIC STARS, GEOMETRIC SHAPES & FLOATING SANSKRIT SHLOKAS CANVAS BACKGROUND
+   ========================================== */
+function initCanvasBackground() {
+  const canvas = document.getElementById('bg-canvas');
+  if (!canvas) return;
+  
+  const ctx = canvas.getContext('2d');
+  let width = canvas.width = window.innerWidth;
+  let height = canvas.height = window.innerHeight;
+
+  window.addEventListener('resize', () => {
+    width = canvas.width = window.innerWidth;
+    height = canvas.height = window.innerHeight;
+  });
+
+  const particles = [];
+  const shlokas = [];
+  const shapes = [];
+  const waves = [];
+  
+  const particleCount = Math.min(70, Math.floor((width * height) / 20000));
+  const shapeCount = 6;
+  const connectionDistance = 135;
+  let mouse = { x: null, y: null, radius: 180 };
+
+  window.addEventListener('mousemove', (e) => {
+    mouse.x = e.clientX;
+    mouse.y = e.clientY;
+  });
+
+  window.addEventListener('mouseleave', () => {
+    mouse.x = null;
+    mouse.y = null;
+  });
+
+  // 1. Colourful Star Balls Class
+  class CosmicParticle {
+    constructor() {
+      this.reset();
+      this.x = Math.random() * width;
+      this.y = Math.random() * height;
+    }
+
+    reset() {
+      this.x = Math.random() * width;
+      this.y = Math.random() * height;
+      this.vx = (Math.random() - 0.5) * 0.35; 
+      this.vy = (Math.random() - 0.5) * 0.35;
+      
+      // Colourful stars (small glowing dots)
+      this.radius = Math.random() * 1.5 + 0.4; 
+      
+      // Curated rich colorful palette
+      const colors = [
+        '#ffd700', // Gold
+        '#ff6a00', // Saffron
+        '#b87333', // Copper
+        '#00d2ff', // Neon Blue
+        '#e0aaff', // Lavender Blue
+        '#ff85a1', // Rose Pink
+        '#b388ff'  // Purple Blue
+      ];
+      this.color = colors[Math.floor(Math.random() * colors.length)];
+      this.alpha = Math.random() * 0.5 + 0.25;
+      this.glow = Math.random() > 0.6; 
+    }
+
+    update() {
+      this.x += this.vx;
+      this.y += this.vy;
+
+      if (mouse.x !== null) {
+        const dx = mouse.x - this.x;
+        const dy = mouse.y - this.y;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+        
+        if (dist < mouse.radius) {
+          const force = (mouse.radius - dist) / mouse.radius;
+          this.x += (dx / dist) * force * 0.45;
+          this.y += (dy / dist) * force * 0.45;
+        }
+      }
+
+      if (this.x < 0 || this.x > width || this.y < 0 || this.y > height) {
+        this.reset();
+        if (Math.random() > 0.5) {
+          this.x = this.vx > 0 ? 0 : width;
+        } else {
+          this.y = this.vy > 0 ? 0 : height;
+        }
+      }
+    }
+
+    draw() {
+      ctx.save();
+      ctx.beginPath();
+      ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+      ctx.fillStyle = this.color;
+      ctx.globalAlpha = this.alpha;
+      
+      if (this.glow) {
+        ctx.shadowColor = this.color;
+        ctx.shadowBlur = this.radius * 2.5;
+      }
+      
+      ctx.fill();
+      ctx.restore();
+
+      // Render micro technical telemetry readouts near mouse
+      if (mouse.x !== null) {
+        const dx = mouse.x - this.x;
+        const dy = mouse.y - this.y;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+        if (dist < 60 && Math.random() < 0.05) {
+          ctx.save();
+          ctx.font = "6px 'Rajdhani', sans-serif";
+          ctx.fillStyle = "rgba(0, 210, 255, 0.35)";
+          ctx.fillText(`V:${Math.floor(this.x)}:${Math.floor(this.y)}`, this.x + 8, this.y - 2);
+          ctx.restore();
+        }
+      }
+    }
+  }
+
+  // 2. Floating Triangles & Circles Outlines
+  class GeometricShape {
+    constructor() {
+      this.reset();
+      this.y = Math.random() * height;
+    }
+
+    reset() {
+      this.x = Math.random() * width;
+      this.y = height + Math.random() * 80 + 20;
+      this.type = Math.random() > 0.5 ? 'circle' : 'triangle';
+      this.size = Math.random() * 25 + 15; // Size between 15px and 40px
+      this.vx = (Math.random() - 0.5) * 0.25;
+      this.vy = -0.2 - Math.random() * 0.25; // Drift upwards
+      this.rotation = Math.random() * Math.PI * 2;
+      this.rotationSpeed = (Math.random() - 0.5) * 0.006;
+      
+      const colors = ['#ffd700', '#00d2ff', '#ff6a00'];
+      this.color = colors[Math.floor(Math.random() * colors.length)];
+      
+      this.alpha = 0;
+      this.maxAlpha = Math.random() * 0.09 + 0.03; // Subtle, ambient
+      this.fadeSpeed = 0.001 + Math.random() * 0.002;
+      this.phase = 'fade-in';
+      this.driftDuration = 600 + Math.random() * 600;
+    }
+
+    update() {
+      this.x += this.vx;
+      this.y += this.vy;
+      this.rotation += this.rotationSpeed;
+
+      if (this.phase === 'fade-in') {
+        this.alpha += this.fadeSpeed;
+        if (this.alpha >= this.maxAlpha) {
+          this.alpha = this.maxAlpha;
+          this.phase = 'drift';
+        }
+      } else if (this.phase === 'drift') {
+        this.driftDuration--;
+        if (this.driftDuration <= 0) {
+          this.phase = 'fade-out';
+        }
+      } else if (this.phase === 'fade-out') {
+        this.alpha -= this.fadeSpeed;
+        if (this.alpha <= 0) {
+          this.reset();
+        }
+      }
+
+      if (this.y < -50 || this.x < -50 || this.x > width + 50) {
+        this.reset();
+      }
+    }
+
+    draw() {
+      ctx.save();
+      ctx.strokeStyle = this.color;
+      ctx.globalAlpha = this.alpha;
+      ctx.lineWidth = 0.85;
+      ctx.shadowColor = this.color;
+      ctx.shadowBlur = 4;
+      
+      ctx.translate(this.x, this.y);
+      ctx.rotate(this.rotation);
+
+      ctx.beginPath();
+      if (this.type === 'circle') {
+        ctx.arc(0, 0, this.size / 2, 0, Math.PI * 2);
+      } else {
+        const r = this.size / 2;
+        ctx.moveTo(0, -r);
+        ctx.lineTo(r * 0.866, r * 0.5);
+        ctx.lineTo(-r * 0.866, r * 0.5);
+        ctx.closePath();
+      }
+      ctx.stroke();
+      ctx.restore();
+    }
+  }
+
+  // 3. Floating Sanskrit Shlokas
+  const canvasShlokas = [
+    "कर्मण्येवाधिकारस्ते मा फलेषु कदाचन",
+    "तमसो मा ज्योतिर्गमय",
+    "सत्यमेव जयते नानृतं",
+    "विजयाय बुद्धिः",
+    "संगच्छध्वं संवदध्वं सं वो मनांसि जानताम्",
+    "ज्ञानं परमं बलम्"
+  ];
+
+  class ShlokaParticle {
+    constructor() {
+      this.reset();
+      this.y = Math.random() * height;
+    }
+
+    reset() {
+      this.x = Math.random() * Math.max(100, width - 400) + 20;
+      this.y = height + Math.random() * 80 + 20;
+      this.vx = (Math.random() - 0.5) * 0.08;
+      this.vy = -0.15 - Math.random() * 0.18; // Slow drift up
+      this.text = canvasShlokas[Math.floor(Math.random() * canvasShlokas.length)];
+      this.alpha = 0;
+      this.maxAlpha = Math.random() * 0.22 + 0.18; // Increased visibility (range 0.18 to 0.40 opacity)
+      this.fadeSpeed = 0.001 + Math.random() * 0.002;
+      this.phase = 'fade-in';
+      this.driftDuration = 500 + Math.random() * 700;
+    }
+
+    update() {
+      this.x += this.vx;
+      this.y += this.vy;
+
+      if (this.phase === 'fade-in') {
+        this.alpha += this.fadeSpeed;
+        if (this.alpha >= this.maxAlpha) {
+          this.alpha = this.maxAlpha;
+          this.phase = 'drift';
+        }
+      } else if (this.phase === 'drift') {
+        this.driftDuration--;
+        if (this.driftDuration <= 0) {
+          this.phase = 'fade-out';
+        }
+      } else if (this.phase === 'fade-out') {
+        this.alpha -= this.fadeSpeed;
+        if (this.alpha <= 0) {
+          this.reset();
+        }
+      }
+
+      if (this.y < -50 || this.x < -100 || this.x > width + 100) {
+        this.reset();
+      }
+    }
+
+    draw() {
+      ctx.save();
+      // Using Yatra One font for beautiful traditional Devanagari calligraphy
+      ctx.font = "18px 'Yatra One', cursive";
+      ctx.fillStyle = `rgba(255, 170, 50, ${this.alpha})`; // Glowing gold/saffron
+      ctx.shadowColor = "rgba(255, 106, 0, 0.5)";
+      ctx.shadowBlur = 10;
+      ctx.fillText(this.text, this.x, this.y);
+      ctx.restore();
+    }
+  }
+
+  // 4. Cosmic Energy Flow Waves (Plasma Flow)
+  class CosmicWave {
+    constructor() {
+      this.reset();
+      this.y = Math.random() * height;
+    }
+
+    reset() {
+      this.y = Math.random() * height;
+      this.speed = Math.random() * 0.003 + 0.0015;
+      this.amplitude = Math.random() * 25 + 8;
+      this.frequency = Math.random() * 0.002 + 0.0008;
+      this.phase = Math.random() * Math.PI * 2;
+      
+      const colors = [
+        'rgba(229, 169, 60, 0.05)', // Gold glow
+        'rgba(0, 210, 255, 0.05)',  // Neon Blue glow
+        'rgba(255, 106, 0, 0.05)'   // Saffron glow
+      ];
+      this.color = colors[Math.floor(Math.random() * colors.length)];
+    }
+
+    update() {
+      this.phase += this.speed;
+    }
+
+    draw() {
+      ctx.save();
+      ctx.strokeStyle = this.color;
+      ctx.lineWidth = 1.2;
+      ctx.shadowColor = this.color;
+      ctx.shadowBlur = 6;
+      ctx.beginPath();
+      
+      for (let x = 0; x < width; x += 15) {
+        const y = this.y + Math.sin(x * this.frequency + this.phase) * this.amplitude;
+        if (x === 0) {
+          ctx.moveTo(x, y);
+        } else {
+          ctx.lineTo(x, y);
+        }
+      }
+      ctx.stroke();
+      ctx.restore();
+    }
+  }
+
+  // 5. Holographic Mandala (Sri Yantra outline) spinning slowly at center
+  class HolographicMandala {
+    constructor() {
+      this.x = width / 2;
+      this.y = height / 2;
+      this.angle = 0;
+      this.rotationSpeed = 0.0003; // Extremely slow, meditative rotation
+      this.color = '#ffd700'; // Gold
+      this.alpha = 0.04; // Very subtle watermark
+    }
+
+    update() {
+      this.x = width / 2;
+      this.y = height / 2;
+      this.angle += this.rotationSpeed;
+    }
+
+    draw() {
+      ctx.save();
+      ctx.translate(this.x, this.y);
+      ctx.rotate(this.angle);
+      ctx.strokeStyle = this.color;
+      ctx.globalAlpha = this.alpha;
+      ctx.lineWidth = 0.8;
+      ctx.shadowColor = this.color;
+      ctx.shadowBlur = 4;
+
+      const r = Math.min(width, height) * 0.32; // Responsive radius
+
+      // Bhupura (Square wall with gates)
+      ctx.beginPath();
+      ctx.rect(-r * 1.1, -r * 1.1, r * 2.2, r * 2.2);
+      ctx.stroke();
+
+      // Inner circular bounds
+      ctx.beginPath();
+      ctx.arc(0, 0, r, 0, Math.PI * 2);
+      ctx.arc(0, 0, r * 0.85, 0, Math.PI * 2);
+      ctx.arc(0, 0, r * 0.7, 0, Math.PI * 2);
+      ctx.stroke();
+
+      // Triangles layout (representing the overlapping triangles of Sri Yantra)
+      const triangleSizes = [0.7, 0.55, 0.4, 0.25];
+      triangleSizes.forEach((scale) => {
+        const tr = r * scale;
+        // Upward triangle
+        ctx.beginPath();
+        ctx.moveTo(0, -tr);
+        ctx.lineTo(tr * 0.866, tr * 0.5);
+        ctx.lineTo(-tr * 0.866, tr * 0.5);
+        ctx.closePath();
+        ctx.stroke();
+
+        // Downward triangle
+        ctx.beginPath();
+        ctx.moveTo(0, tr);
+        ctx.lineTo(tr * 0.866, -tr * 0.5);
+        ctx.lineTo(-tr * 0.866, -tr * 0.5);
+        ctx.closePath();
+        ctx.stroke();
+      });
+
+      // Lotus petals accents
+      const petals = 8;
+      for (let i = 0; i < petals; i++) {
+        const petalAngle = (i * Math.PI * 2) / petals;
+        ctx.save();
+        ctx.rotate(petalAngle);
+        ctx.beginPath();
+        ctx.arc(0, -r * 0.775, r * 0.08, 0, Math.PI, true);
+        ctx.stroke();
+        ctx.restore();
+      }
+
+      // Center bindu dot
+      ctx.beginPath();
+      ctx.arc(0, 0, 3, 0, Math.PI * 2);
+      ctx.fillStyle = this.color;
+      ctx.globalAlpha = this.alpha * 2;
+      ctx.fill();
+
+      ctx.restore();
+    }
+  }
+
+  // Initialize objects
+  for (let i = 0; i < particleCount; i++) {
+    particles.push(new CosmicParticle());
+  }
+
+  for (let i = 0; i < shapeCount; i++) {
+    shapes.push(new GeometricShape());
+  }
+
+  for (let i = 0; i < 6; i++) { // Increased shlokas to 6 for higher visibility
+    shlokas.push(new ShlokaParticle());
+  }
+
+  for (let i = 0; i < 2; i++) {
+    waves.push(new CosmicWave());
+  }
+
+  const mandala = new HolographicMandala();
+
+  function animate() {
+    ctx.clearRect(0, 0, width, height);
+
+    // Update & Draw Holographic Mandala (Sri Yantra outline)
+    mandala.update();
+    mandala.draw();
+
+    // Update & Draw Energy Waves (Cosmic Energy flow)
+    waves.forEach(wave => {
+      wave.update();
+      wave.draw();
+    });
+
+    // Update & Draw Geometric Shapes (Triangles and Circles outlines)
+    shapes.forEach(shape => {
+      shape.update();
+      shape.draw();
+    });
+
+    // Update & Draw Sanskrit Shlokas
+    shlokas.forEach(shloka => {
+      shloka.update();
+      shloka.draw();
+    });
+
+    // Update & Draw Colourful Stars
+    for (let i = 0; i < particles.length; i++) {
+      particles[i].update();
+      particles[i].draw();
+
+      // Constellation linkages (Cosmic Energy mesh)
+      for (let j = i + 1; j < particles.length; j++) {
+        const dx = particles[i].x - particles[j].x;
+        const dy = particles[i].y - particles[j].y;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+
+        if (dist < connectionDistance) {
+          const alpha = (1 - dist / connectionDistance) * 0.12;
+          ctx.beginPath();
+          ctx.moveTo(particles[i].x, particles[i].y);
+          ctx.lineTo(particles[j].x, particles[j].y);
+          
+          if (mouse.x !== null) {
+            const mdx1 = mouse.x - particles[i].x;
+            const mdy1 = mouse.y - particles[i].y;
+            const mdist1 = Math.sqrt(mdx1 * mdx1 + mdy1 * mdy1);
+            if (mdist1 < mouse.radius) {
+              ctx.strokeStyle = `rgba(0, 210, 255, ${alpha * 2.2})`; // Neon Blue glowing mesh near cursor
+            } else {
+              ctx.strokeStyle = `rgba(184, 115, 51, ${alpha})`; // Warm copper/saffron linkages
+            }
+          } else {
+            ctx.strokeStyle = `rgba(184, 115, 51, ${alpha})`;
+          }
+          ctx.lineWidth = 0.55;
+          ctx.stroke();
+        }
+      }
+    }
+
+    requestAnimationFrame(animate);
+  }
+  animate();
+}
+
+/* ==========================================
+   3. WEB AUDIO API INDIAN TANPURA SYNTHESIZER
+   ========================================== */
+class TanpuraEngine {
+  constructor() {
+    this.ctx = null;
+    this.oscillators = [];
+    this.gains = [];
+    this.filters = [];
+    this.isPlaying = false;
+    this.muted = false;
+  }
+
+  init() {
+    if (this.ctx) return;
+    this.ctx = new (window.AudioContext || window.webkitAudioContext)();
+    
+    // Five Tanpura string frequencies (Tuned base around C# string scale)
+    const baseFreqs = [
+      { f: 207.65, type: 'triangle', gain: 0.16 }, // Pa string (5th)
+      { f: 277.18, type: 'sawtooth', gain: 0.08 }, // Sa octave (4th)
+      { f: 277.18, type: 'triangle', gain: 0.12 }, // Sa octave (3rd)
+      { f: 138.60, type: 'sawtooth', gain: 0.09 }, // Sa fundamental (2nd)
+      { f: 69.30,  type: 'sine',     gain: 0.28 }  // Kharaj Sa (1st low base string)
+    ];
+
+    this.masterGain = this.ctx.createGain();
+    this.masterGain.gain.value = 0.35; // Master volume control
+    
+    this.masterFilter = this.ctx.createBiquadFilter();
+    this.masterFilter.type = 'lowpass';
+    this.masterFilter.frequency.value = 600;
+    this.masterFilter.Q.value = 1.3;
+
+    this.masterFilter.connect(this.masterGain);
+    this.masterGain.connect(this.ctx.destination);
+
+    baseFreqs.forEach((spec) => {
+      const sGain = this.ctx.createGain();
+      sGain.gain.value = 0; // Starts silent until plucked
+
+      const osc = this.ctx.createOscillator();
+      osc.type = spec.type;
+      osc.frequency.value = spec.f;
+      osc.detune.value = (Math.random() - 0.5) * 6; // Detuning effect
+
+      const filter = this.ctx.createBiquadFilter();
+      filter.type = 'lowpass';
+      filter.frequency.value = spec.f * 2.8;
+
+      osc.connect(filter);
+      filter.connect(sGain);
+      sGain.connect(this.masterFilter);
+
+      this.oscillators.push(osc);
+      this.gains.push(sGain);
+      this.filters.push(filter);
+      
+      osc.start();
+    });
+
+    this.initModulation();
+  }
+
+  initModulation() {
+    const lfo = this.ctx.createOscillator();
+    lfo.frequency.value = 0.07; 
+    const lfoGain = this.ctx.createGain();
+    lfoGain.gain.value = 140; 
+    lfo.connect(lfoGain);
+    lfoGain.connect(this.masterFilter.frequency);
+    lfo.start();
+
+    this.pluckSequence();
+  }
+
+  pluckSequence() {
+    let pluckIndex = 0;
+    const timings = [2300, 2300, 2300, 2600]; 
+    
+    const cycle = () => {
+      if (!this.isPlaying) return;
+      const idx = pluckIndex % this.gains.length;
+      this.pluckString(idx);
+      pluckIndex++;
+      setTimeout(cycle, timings[pluckIndex % timings.length]);
+    };
+    cycle();
+  }
+
+  pluckString(index) {
+    if (this.muted) return;
+    const gainNode = this.gains[index];
+    const now = this.ctx.currentTime;
+    
+    gainNode.gain.cancelScheduledValues(now);
+    gainNode.gain.setValueAtTime(0.01, now);
+    gainNode.gain.linearRampToValueAtTime(0.24, now + 0.12); 
+    gainNode.gain.exponentialRampToValueAtTime(0.004, now + 4.8); 
+  }
+
+  start() {
+    this.init();
+    if (this.isPlaying) return;
+    
+    if (this.ctx.state === 'suspended') {
+      this.ctx.resume();
+    }
+    
+    this.isPlaying = true;
+    this.pluckSequence();
+  }
+
+  toggleMute() {
+    this.muted = !this.muted;
+    if (this.ctx) {
+      const now = this.ctx.currentTime;
+      if (this.muted) {
+        this.masterGain.gain.setValueAtTime(this.masterGain.gain.value, now);
+        this.masterGain.gain.linearRampToValueAtTime(0, now + 0.4);
+      } else {
+        this.masterGain.gain.cancelScheduledValues(now);
+        this.masterGain.gain.linearRampToValueAtTime(0.35, now + 0.4);
+      }
+    }
+    return this.muted;
+  }
+}
+
+/* ==========================================
+   4. INTRO CINEMATIC SEQUENCE CONTROL
+   ========================================== */
+function initIntroScene() {
+  const intro = document.getElementById('intro-stage');
+  const bookStage = document.getElementById('book-opening-stage');
+  
+  // Transition out welcome after 3.8s
+  setTimeout(() => {
+    if (intro && bookStage) {
+      intro.classList.add('intro-stage-out');
+      setTimeout(() => {
+        intro.classList.remove('active');
+        bookStage.classList.add('active');
+      }, 1200);
+    }
+  }, 3800);
+}
+
+/* ==========================================
+   5. BOOK OPENING CONTROL & PORTFOLIO REVEAL
+   ========================================== */
+function initBookController() {
+  const bookStage = document.getElementById('book-opening-stage');
+  const openingBook = document.getElementById('opening-book');
+  const webContent = document.getElementById('web-content');
+  const btnAudioToggle = document.getElementById('btn-audio-toggle');
+  
+  soundEngine = new TanpuraEngine();
+
+  if (openingBook) {
+    openingBook.addEventListener('click', () => {
+      openingBook.classList.add('opened');
+      
+      // Start sound engine if it hasn't been started yet (e.g. they didn't toggle it in header first)
+      if (!soundEngine.isPlaying) {
+        soundEngine.start();
+      }
+      
+      // Sync the telemetry audio toggle button UI to current engine states
+      if (btnAudioToggle) {
+        if (soundEngine.muted) {
+          btnAudioToggle.classList.remove('playing');
+          btnAudioToggle.querySelector('span').textContent = 'AUDIO: MUTED';
+        } else {
+          btnAudioToggle.classList.add('playing');
+          btnAudioToggle.querySelector('span').textContent = 'AUDIO: LIVE';
+        }
+      }
+
+      // Wait for the cover swing transition (1.5s)
+      setTimeout(() => {
+        bookStage.classList.add('fade-out');
+        webContent.classList.add('visible-web');
+        
+        // Remove scroll lock
+        document.documentElement.classList.remove('scroll-locked');
+        
+        // Setup card 3D tilt effects
+        initCardTilt();
+        
+        setTimeout(() => {
+          bookStage.classList.remove('active');
+        }, 1000);
+      }, 1500);
+    });
+  }
+
+  // Audio control in header (Supports clicking at any time, even before chronicle is opened)
+  if (btnAudioToggle) {
+    btnAudioToggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      
+      if (!soundEngine.isPlaying) {
+        // First click on the button before book opening starts the engine
+        soundEngine.start();
+        soundEngine.muted = false; // Ensure it starts unmuted
+      } else {
+        soundEngine.toggleMute();
+      }
+      
+      if (soundEngine.muted) {
+        btnAudioToggle.classList.remove('playing');
+        btnAudioToggle.querySelector('span').textContent = 'AUDIO: MUTED';
+      } else {
+        btnAudioToggle.classList.add('playing');
+        btnAudioToggle.querySelector('span').textContent = 'AUDIO: LIVE';
+      }
+    });
+  }
+}
+
+/* ==========================================
+   6. 3D CARD TILT & GLARE EFFECT
+   ========================================== */
+function initCardTilt() {
+  const cards = document.querySelectorAll('.about-card, .project-card, .founder-card, #mandala-hologram');
+  
+  cards.forEach(card => {
+    let glare = null;
+    if (!card.classList.contains('hologram-container') && !card.querySelector('.card-glare')) {
+      glare = document.createElement('div');
+      glare.classList.add('card-glare');
+      card.appendChild(glare);
+    } else {
+      glare = card.querySelector('.card-glare');
+    }
+
+    card.addEventListener('mousemove', (e) => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      
+      const centerX = rect.width / 2;
+      const centerY = rect.height / 2;
+      
+      const rotateX = ((centerY - y) / centerY) * 8;
+      const rotateY = ((x - centerX) / centerX) * 8;
+      
+      card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+      
+      if (glare) {
+        glare.style.opacity = '1';
+        const percentageX = (x / rect.width) * 100;
+        const percentageY = (y / rect.height) * 100;
+        glare.style.background = `radial-gradient(circle at ${percentageX}% ${percentageY}%, rgba(255, 255, 255, 0.12) 0%, transparent 80%)`;
+      }
+    });
+
+    card.addEventListener('mouseleave', () => {
+      card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+      if (glare) {
+        glare.style.opacity = '0';
+      }
+    });
+  });
+}
+
+/* ==========================================
+   7. MOBILE MENU CONTROL
+   ========================================== */
+function initMobileMenu() {
+  const hamburger = document.querySelector('.hamburger');
+  const navLinks = document.querySelector('.nav-links');
+  const links = document.querySelectorAll('.nav-links a');
+
+  if (hamburger && navLinks) {
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      navLinks.classList.toggle('active');
+    });
+
+    links.forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navLinks.classList.remove('active');
+      });
+    });
+  }
+}
+
+/* ==========================================
+   8. INTERSECTION OBSERVER FOR SCROLL REVEALS
+   ========================================== */
+function initScrollReveal() {
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+      }
+    });
+  }, { threshold: 0.12 });
+
+  reveals.forEach(el => observer.observe(el));
+}
+
+/* ==========================================
+   9. SCROLL SPY & NAVIGATION HIGHLIGHT
+   ========================================== */
+function initNavHighlight() {
+  const sections = document.querySelectorAll('section');
+  const navLinks = document.querySelectorAll('.nav-links a');
+
+  window.addEventListener('scroll', () => {
+    let current = '';
+    const scrollPos = window.scrollY || window.pageYOffset;
+
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.clientHeight;
+      if (scrollPos >= (sectionTop - sectionHeight / 3.5)) {
+        current = section.getAttribute('id');
+      }
+    });
+
+    navLinks.forEach(link => {
+      link.classList.remove('active');
+      if (link.getAttribute('href') === `#${current}`) {
+        link.classList.add('active');
+      }
+    });
+  });
+}
+
+/* ==========================================
+   10. SECURE TERMINAL TRANSMISSION HANDLER
+   ========================================== */
+function initTerminalHub() {
+  const form = document.getElementById('contact-form');
+  const logScreen = document.getElementById('terminal-logs');
+
+  if (!form || !logScreen) return;
+
+  function logMessage(text, delay = 0, color = null) {
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        const p = document.createElement('p');
+        p.textContent = text;
+        if (color) p.style.color = color;
+        logScreen.appendChild(p);
+        logScreen.scrollTop = logScreen.scrollHeight;
+        resolve();
+      }, delay);
+    });
+  }
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const name = document.getElementById('form-name').value.trim();
+    const email = document.getElementById('form-email').value.trim();
+    const message = document.getElementById('form-message').value.trim();
+
+    if (!name || !email || !message) return;
+
+    const inputs = form.querySelectorAll('input, textarea, button');
+    inputs.forEach(el => el.disabled = true);
+
+    logScreen.innerHTML = ''; 
+    
+    await logMessage('> initiating transmission sequence...', 100);
+    await logMessage(`> prajvaya --connect --target mailto:prajvaya@gmail.com`, 300);
+    await logMessage('> ESTABLISHING ENCRYPTED CHANNELS...', 400);
+    await logMessage(`> AUTHENTICATING CLIENT: [${name.toUpperCase()}]`, 400);
+    await logMessage(`> TRANSMITTING COGNITIVE PAYLOAD PACKET...`, 600);
+    
+    let percent = 0;
+    const interval = setInterval(async () => {
+      percent += 25;
+      if (percent <= 100) {
+        logScreen.lastChild.textContent = `> TRANSMITTING COGNITIVE PAYLOAD PACKET... ${percent}%`;
+        logScreen.scrollTop = logScreen.scrollHeight;
+      } else {
+        clearInterval(interval);
+        await logMessage('> SIGNAL EMITTED SUCCESSFULLY.', 300, '#00d2ff');
+        await logMessage('> TRANSMISSION LOGGED: "Knowledge creates possibility. Determination creates reality."', 400, '#ff6a00');
+        await logMessage('> session closed. status: stable.', 300);
+        
+        form.reset();
+        inputs.forEach(el => el.disabled = false);
+      }
+    }, 150);
+  });
+}
+
+/* ==========================================
+   11. SCROLL-TRIGGERED OUTRO REVEAL (ZOOM OUT TO THANK YOU)
+   ========================================== */
+function initOutroScrollTrigger() {
+  outroTriggered = false;
+
+  window.addEventListener('wheel', (e) => {
+    const webContent = document.getElementById('web-content');
+    if (!webContent || !webContent.classList.contains('visible-web') || outroTriggered) return;
+
+    // Check if user is scrolled to the absolute bottom (with small tolerance)
+    const isAtBottom = (window.innerHeight + window.scrollY) >= (document.documentElement.scrollHeight - 25);
+    
+    // e.deltaY > 0 means scrolling down further
+    if (isAtBottom && e.deltaY > 0) {
+      triggerOutroSequence();
+    }
+  });
+
+  // Handle touch events for mobile scrolling past bottom
+  let touchStartY = 0;
+  window.addEventListener('touchstart', (e) => {
+    touchStartY = e.touches[0].clientY;
+  });
+
+  window.addEventListener('touchmove', (e) => {
+    const webContent = document.getElementById('web-content');
+    if (!webContent || !webContent.classList.contains('visible-web') || outroTriggered) return;
+
+    const touchEndY = e.touches[0].clientY;
+    const isAtBottom = (window.innerHeight + window.scrollY) >= (document.documentElement.scrollHeight - 25);
+    
+    // Swiping up (touchStartY > touchEndY + 10) means trying to scroll down
+    if (isAtBottom && touchStartY > touchEndY + 10) {
+      triggerOutroSequence();
+    }
+  });
+
+  // Outro stage button restart handler
+  const btnRestart = document.getElementById('btn-restart');
+  if (btnRestart) {
+    btnRestart.addEventListener('click', () => {
+      // Hide outro
+      const outroStage = document.getElementById('outro-stage');
+      if (outroStage) {
+        outroStage.className = 'stage';
+      }
+      
+      // Reset web content classes
+      const webContent = document.getElementById('web-content');
+      if (webContent) {
+        webContent.className = '';
+      }
+
+      // Reset book opening stage classes
+      const bookStage = document.getElementById('book-opening-stage');
+      if (bookStage) {
+        bookStage.className = 'stage';
+      }
+      
+      // Reset book cover state
+      const openingBook = document.getElementById('opening-book');
+      if (openingBook) {
+        openingBook.classList.remove('opened');
+      }
+      
+      // Reset scroll position and lock page scrolling
+      window.scrollTo(0, 0);
+      document.documentElement.classList.add('scroll-locked');
+      
+      // Mute audio indicator loop
+      const btnAudioToggle = document.getElementById('btn-audio-toggle');
+      if (btnAudioToggle) {
+        btnAudioToggle.classList.remove('playing');
+        btnAudioToggle.querySelector('span').textContent = 'AUDIO: MUTED';
+      }
+      if (soundEngine) {
+        if (soundEngine.isPlaying && !soundEngine.muted) {
+          soundEngine.toggleMute();
+        }
+      }
+      
+      // Show welcome intro stage again (removes the intro-stage-out class)
+      const introStage = document.getElementById('intro-stage');
+      introStage.className = 'stage active';
+      
+      // Reset welcome text entrance animations
+      const title = document.getElementById('intro-title-text');
+      const subtitle = document.getElementById('intro-subtitle-text');
+      if (title && subtitle) {
+        title.style.animation = 'none';
+        subtitle.style.animation = 'none';
+        title.offsetHeight; // force reflow
+        subtitle.offsetHeight;
+        title.style.animation = 'welcomeEntrance 2.2s cubic-bezier(0.19, 1, 0.22, 1) forwards';
+        title.style.animationDelay = '0.5s';
+        subtitle.style.animation = 'welcomeEntrance 2.2s cubic-bezier(0.19, 1, 0.22, 1) forwards';
+        subtitle.style.animationDelay = '1.3s';
+      }
+      
+      outroTriggered = false;
+      
+      // Re-trigger welcome screen to book stage timer
+      initIntroScene();
+    });
+  }
+}
+
+function triggerOutroSequence() {
+  outroTriggered = true;
+  
+  // Lock body scroll again
+  document.documentElement.classList.add('scroll-locked');
+  
+  // Zoom out / Fade out web content
+  const webContent = document.getElementById('web-content');
+  webContent.classList.add('web-content-out');
+  
+  // Reveal outro stage with a brief delay
+  const outroStage = document.getElementById('outro-stage');
+  setTimeout(() => {
+    outroStage.classList.add('active');
+  }, 600);
+}
+  </script>
+</body>
+</html>

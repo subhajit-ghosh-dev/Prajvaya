@@ -1,0 +1,23 @@
+{
+  "name": "prajvaya-portfolio",
+  "version": "1.0.0",
+  "description": "PRAJVAYA - Victory Through Intellect | Premium Portfolio Website",
+  "main": "index.html",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "keywords": [
+    "prajvaya",
+    "portfolio",
+    "vedic-futurism",
+    "cosmic",
+    "sri-yantra"
+  ],
+  "author": "Subhajit Ghosh & Survi Mukherjee",
+  "license": "MIT",
+  "devDependencies": {
+    "vite": "^5.0.0"
+  }
+}
